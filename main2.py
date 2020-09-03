@@ -7,6 +7,7 @@ number = random.randint(1,10)
 num = str (number)
 tries = 5
 guessCount = 0
+print ("You have 5 chances")
 guess = input("Guess a number from 1 to 10: ")
 while guessCount != tries-1:
     print
@@ -27,7 +28,8 @@ while guessCount != tries-1:
                 print("Right answer!")
                 break
 
+if guessCount == 4:
+    print("FAIL. Out of tries.")
 if guessCount !=tries:
-    print("Right answer was:" + num)
+    print("The number was:" + num)
 
-print("Number of guesses:" + str (guessCount))
